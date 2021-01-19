@@ -17,11 +17,16 @@ namespace Users_Cars_Management_System
     /// <summary>
     /// Interaction logic for CarsWindow.xaml
     /// </summary>
-    public partial class CarsWindow : Window
+    public partial class CarsDialog : Window
     {
-        public CarsWindow()
+        // We might use those ones as in the Car project showed before by Reza
+        //public event Action<Car> AddedNewCar;
+        //public Car currCar;
+
+        public CarsDialog(CarOwner carOwner)
         {
             InitializeComponent();
+            // Here we populate dynamic fields on initalization of dialog window with informations about cars of the user
         }
     }
 }

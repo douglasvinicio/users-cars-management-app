@@ -65,7 +65,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Cars.cs" />
+    <Compile Include="Car.cs" />
+    <Compile Include="CarOwner.cs" />
     <Compile Include="UsersCarsDbContext.cs" />
     <Page Include="CarsDialog.xaml">
       <SubType>Designer</SubType>

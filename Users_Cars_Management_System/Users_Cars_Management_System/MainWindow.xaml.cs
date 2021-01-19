@@ -23,6 +23,76 @@ namespace Users_Cars_Management_System
         public MainWindow()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            List<CarOwner> carOwnersList = Global.ctx.CarOwners.ToList<CarOwner>();
+            lvOwners.ItemsSource = carOwnersList;
+            lvOwners.Items.Refresh();
+        }
+
+        private void btnManageCars_Click(object sender, RoutedEventArgs e)
+        {
+            // Showing Cars Dialog Window 
+            // Here I'm passing car owner selected item on list as a parameter to open new dialog window. But not sure yet how to fetch this owner from db.
+            CarOwner carOwner = (CarOwner)lvOwners.SelectedItem;
+            CarsDialog carsDialog = new CarsDialog(carOwner);
+            carsDialog.Owner = this;
+            bool? result = carsDialog.ShowDialog();
+
+            if (result == true)
+            {
+                lvOwners.Items.Refresh();
+            }
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            string name = txtName.Text;
+            CarOwner newCarOwner = new CarOwner { Name = name};
+            Global.ctx.CarOwners.Add(newCarOwner);
+            Global.ctx.SaveChanges();
+
+            LoadData();
+        }
+
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            string newName = txtName.Text;
+
+            CarOwner carOwnerUpdate = (CarOwner)lvOwners.SelectedItem;
+
+            carOwnerUpdate.Name = newName;
+            Global.ctx.SaveChanges();
+
+            LoadData();
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            CarOwner carOwnerDelete = (CarOwner)lvOwners.SelectedItem;
+            Global.ctx.CarOwners.Remove(carOwnerDelete);
+            Global.ctx.SaveChanges();
+
+            LoadData();
+        }
+
+        private void lvOwners_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            btnUpdate.IsEnabled = true;
+            btnDelete.IsEnabled = true;
+
+            var selectedOwner = lvOwners.SelectedItem;
+
+            if (selectedOwner is CarOwner)
+            {
+                CarOwner carOwner = (CarOwner)lvOwners.SelectedItem;
+
+                txtName.Text = carOwner.Name;
+                lblId.Content = carOwner.OwnerId;
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 
@@ -6,23 +7,19 @@ namespace Users_Cars_Management_System
 {
     public class CarOwner
     {
-        [Required]
+        [Key]
         public int OwnerId { get; set; }
 
+        [Required]
+        [MinLength(2)]
+        [MaxLength(30)]
         public string Name { get; set; }
+
 
         public int NumOfCars { get; set; }
 
-        public CarOwner()
-        {
 
-        }
-        public CarOwner(int ownerId, string name, int numOfCars)
-        {
-            this.OwnerId = ownerId;
-            this.Name = name;
-            this.NumOfCars = numOfCars;
-        }
+        // Constructors
 
     }
 }
