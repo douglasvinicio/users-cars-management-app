@@ -10,7 +10,7 @@
         <ListView HorizontalAlignment="Left" Height="229" Margin="19,21,0,0" VerticalAlignment="Top" Width="228">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="#" Width="40" DisplayMemberBinding="{Binding Id}" />
+                    <GridViewColumn Header="#" Width="40" DisplayMemberBinding="{Binding CarId}" />
                     <GridViewColumn Header="Make and Model" Width="170" DisplayMemberBinding="{Binding MakeModel}" />
                 </GridView>
             </ListView.View>
