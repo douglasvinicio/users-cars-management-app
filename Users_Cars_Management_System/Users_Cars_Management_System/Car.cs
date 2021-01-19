@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace Users_Cars_Management_System
 {
+    [Table("Cars")]
    public class Car
     {
-        //add the columns
+        [Key]
         public int CarId { get; set; }
 
-        [Required]
+        []
+        []
         public string MakeModel { get; set; }
         [Required]
         public int OwnerId { get; set; }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Users_Cars_Management_System
 {
     public class CarOwner
     {
-        //add the columns
+        [Required]
         public int OwnerId { get; set; }
 
         public string Name { get; set; }
