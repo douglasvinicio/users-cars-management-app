@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Cars Dialog" Height="300" Width="500">
     <Grid>
-        <ListView HorizontalAlignment="Left" Height="229" Margin="19,21,0,0" VerticalAlignment="Top" Width="228">
+        <ListView SelectionChanged="lvCars_SelectionChanged" Name="lvCars" HorizontalAlignment="Left" Height="229" Margin="19,21,0,0" VerticalAlignment="Top" Width="228">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="#" Width="40" DisplayMemberBinding="{Binding CarId}" />
@@ -15,14 +15,15 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Name="btnDone" Content="Done" HorizontalAlignment="Left" Margin="298,21,0,0" VerticalAlignment="Top" Width="172"/>
+        <Button Click="btnDone_Click" Name="btnDone" Content="Done" HorizontalAlignment="Left" Margin="298,21,0,0" VerticalAlignment="Top" Width="172"/>
         <Label Content="Owner name:" HorizontalAlignment="Left" Margin="298,76,0,0" VerticalAlignment="Top"/>
         <Label Content="Id:" HorizontalAlignment="Left" Margin="298,120,0,0" VerticalAlignment="Top"/>
         <Label Content="Make and Model:" HorizontalAlignment="Left" Margin="298,160,0,0" VerticalAlignment="Top"/>
         <TextBox Name="txtMakeModel" HorizontalAlignment="Left" Height="23" Margin="302,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="168"/>
-        <Button Name="btnAddCar" Content="Add" HorizontalAlignment="Left" Margin="302,233,0,0" VerticalAlignment="Top" Width="47"/>
-        <Button Name="btnUpdateCar" Content="Update" HorizontalAlignment="Left" Margin="362,233,0,0" VerticalAlignment="Top" Width="47"/>
-        <Button Name="btnDeleteCar" Content="Delete" HorizontalAlignment="Left" Margin="423,234,0,0" VerticalAlignment="Top" Width="47"/>
-        <Label Content="..." HorizontalAlignment="Left" Margin="341,120,0,0" VerticalAlignment="Top"/>
+        <Button Click="btnAddCar_Click" Name="btnAddCar" Content="Add" HorizontalAlignment="Left" Margin="302,233,0,0" VerticalAlignment="Top" Width="47"/>
+        <Button Click="btnUpdateCar_Click" IsEnabled="False" Name="btnUpdateCar" Content="Update" HorizontalAlignment="Left" Margin="362,233,0,0" VerticalAlignment="Top" Width="47"/>
+        <Button Click="btnDeleteCar_Click" IsEnabled="False" Name="btnDeleteCar" Content="Delete" HorizontalAlignment="Left" Margin="423,234,0,0" VerticalAlignment="Top" Width="47"/>
+        <Label Name="lblOwnerId" Content="" HorizontalAlignment="Left" Margin="341,120,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblOwnerName" Content="" HorizontalAlignment="Left" Margin="382,76,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

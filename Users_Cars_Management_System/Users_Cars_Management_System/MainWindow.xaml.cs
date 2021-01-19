@@ -56,6 +56,7 @@ namespace Users_Cars_Management_System
             Global.ctx.SaveChanges();
 
             LoadData();
+            ResetValues();
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
@@ -77,6 +78,7 @@ namespace Users_Cars_Management_System
             Global.ctx.SaveChanges();
 
             LoadData();
+            ResetValues();
         }
 
         private void lvOwners_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -93,6 +95,12 @@ namespace Users_Cars_Management_System
                 txtName.Text = carOwner.Name;
                 lblId.Content = carOwner.OwnerId;
             }
+        }
+
+        public void ResetValues()
+        {
+            txtName.Text = "";
+            lblId.Content = "";
         }
     }
 }
