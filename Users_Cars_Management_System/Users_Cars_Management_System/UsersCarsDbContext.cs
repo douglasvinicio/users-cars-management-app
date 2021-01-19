@@ -9,7 +9,7 @@ namespace Users_Cars_Management_System
 {
     class UsersCarsDbContext : DbContext
     {
-       // public DbSet<Car> TodoList { get; set; }
-       // public DbSet<CarOwner> TodoList { get; set; }
+        // public DbSet<Cars> carsDbset { get; set; }
+        // public DbSet<CarOwners> ownersDbset { get; set; }
     }
 }
