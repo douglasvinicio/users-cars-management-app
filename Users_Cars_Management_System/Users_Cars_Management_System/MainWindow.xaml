@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Users_Cars_Management_System"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Users and Cars Management" Height="450" Width="800">
     <Grid>
         <ListView HorizontalAlignment="Left" Height="354" Margin="28,34,0,0" VerticalAlignment="Top" Width="364">
             <ListView.View>
@@ -23,6 +23,7 @@
         <Button Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="580,312,0,0" VerticalAlignment="Top" Width="62"/>
         <Button Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="673,312,0,0" VerticalAlignment="Top" Width="62"/>
         <Button Name="btnManageCars" Content="Manage Cars" HorizontalAlignment="Left" Margin="492,347,0,0" VerticalAlignment="Top" Width="243"/>
+        <Label Content="..." HorizontalAlignment="Left" Margin="558,81,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
