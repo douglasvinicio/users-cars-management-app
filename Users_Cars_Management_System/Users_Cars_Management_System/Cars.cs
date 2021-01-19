@@ -21,6 +21,10 @@ namespace Users_Cars_Management_System
             this.MakeModel = makeModel;
             this.OwnerId = ownerId;
         }
+        public Cars(string makeModel)
+        {         
+            this.MakeModel = makeModel;          
+        }
         public Cars()
         {
         }
@@ -33,16 +37,16 @@ namespace Users_Cars_Management_System
         public string Name { get; set; }
 
         public int NumOfCars { get; set; }
-
+        public byte OwnerImage { get; set; }
         public CarOwners()
         {
 
         }
-        public CarOwners(int ownerId, string name, int numOfCars)
+        public CarOwners(int ownerId, string name, byte ownerImage)
         {
             this.OwnerId = ownerId;
             this.Name = name;
-            this.NumOfCars = numOfCars;
+            this.OwnerImage = ownerImage;
         }
 
     }

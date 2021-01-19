@@ -41,6 +41,14 @@ namespace Users_Cars_Management_System {
     public partial class CarsWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
+        #line 10 "..\..\CarsDialog.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.ListView lvCars;
+        
+        #line default
+        #line hidden
+        
+        
         #line 18 "..\..\CarsDialog.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnDone;
@@ -80,6 +88,14 @@ namespace Users_Cars_Management_System {
         #line default
         #line hidden
         
+        
+        #line 26 "..\..\CarsDialog.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label lblCarId;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -111,19 +127,25 @@ namespace Users_Cars_Management_System {
             switch (connectionId)
             {
             case 1:
-            this.btnDone = ((System.Windows.Controls.Button)(target));
+            this.lvCars = ((System.Windows.Controls.ListView)(target));
             return;
             case 2:
-            this.txtMakeModel = ((System.Windows.Controls.TextBox)(target));
+            this.btnDone = ((System.Windows.Controls.Button)(target));
             return;
             case 3:
-            this.btnAddCar = ((System.Windows.Controls.Button)(target));
+            this.txtMakeModel = ((System.Windows.Controls.TextBox)(target));
             return;
             case 4:
-            this.btnUpdateCar = ((System.Windows.Controls.Button)(target));
+            this.btnAddCar = ((System.Windows.Controls.Button)(target));
             return;
             case 5:
+            this.btnUpdateCar = ((System.Windows.Controls.Button)(target));
+            return;
+            case 6:
             this.btnDeleteCar = ((System.Windows.Controls.Button)(target));
+            return;
+            case 7:
+            this.lblCarId = ((System.Windows.Controls.Label)(target));
             return;
             }
             this._contentLoaded = true;

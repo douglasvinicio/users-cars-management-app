@@ -8,6 +8,6 @@ namespace Users_Cars_Management_System
 {
     static class Global
     {
-        //public static UsersCarsDbContext = new UsersCarsDbContext();
+        public static UsersCarsDbContext uContext = new UsersCarsDbContext();
     }
 }
